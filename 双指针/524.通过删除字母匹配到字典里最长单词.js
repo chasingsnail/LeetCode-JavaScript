@@ -4,28 +4,25 @@
  * @return {string}
  */
 var findLongestWord = function (s, d) {
-  let result = ''
-  d = d.sort()
-  for (let i = 0; i < d.length; i++) {
-    const str = d[i]
-    console.log(str)
-    let p1 = 0 // s
+	let result = ''
+	// d = d.sort()
+	for (let i = 0; i < d.length; i++) {
+		const str = d[i]
+		let p1 = 0 // sw
     let p2 = 0 // str
-    while (p2 < str.length && p1 < s.length) {
-      while (str[p2] !== s[p1] && p2 < str.length && p1 < s.length) {
-        p1++
-      }
-      if (p2 < str.length && p1 < s.length) {
-        p2++
-        p1++
-      }
-      // console.log(str)
-      if (p2 === str.length && p1 <= s.length && str.length > result.length) {
-        result = str
-      }
-    }
-  }
-  return result
+		for (; p1 < s.length && p2 < str.length; p1++) {
+			if (s[p1] === str[p2]) {
+				p2++
+			}
+		}
+		const valid =
+			str.length > result.length ||
+			(str.length === result.length && str < result)
+		if (p2 === str.length && valid) {
+			result = str
+		}
+	}
+	return result
 }
 
 var s = 'abpcplea'
