@@ -5,7 +5,6 @@
  */
 var findLongestWord = function (s, d) {
 	let result = ''
-	// d = d.sort()
 	for (let i = 0; i < d.length; i++) {
 		const str = d[i]
 		let p1 = 0 // sw
@@ -27,4 +26,5 @@ var findLongestWord = function (s, d) {
 
 var s = 'abpcplea'
 var d = ['a', 'b', 'c']
+// expect stdout 'a'
 console.log(1111, findLongestWord(s, d))

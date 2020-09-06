@@ -17,6 +17,7 @@ var twoSum = function (numbers, target) {
       return [startIndex + 1, endIndex + 1]
     }
   }
+  return [-1, -1]
 }
 
 const res = twoSum([1, 2, 3, 4], 5)
