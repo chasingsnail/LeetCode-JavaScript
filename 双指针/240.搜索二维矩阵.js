@@ -5,7 +5,7 @@
  */
 var searchMatrix = function (matrix, target) {
   if (matrix == null || matrix.length === 0 || matrix[0].length === 0) {
-    return false;
+    return false
   }
   let row = 0
   let col = matrix[0].length - 1
