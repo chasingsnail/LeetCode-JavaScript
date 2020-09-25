@@ -35,8 +35,8 @@ var swapPairs = function(head) {
 
     // 节点交换
     prevNode.next = secondNode
-    secondNode.next = firstNode
     firstNodeNode.next = secondNode.next
+    secondNode.next = firstNode
 
     head = firstNode.next
     prevNode = firstNode
